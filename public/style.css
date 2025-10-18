@@ -1,9 +1,9 @@
-/* public/style.css */
+/* public/style.css - NEW WHITE THEME */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #2c3e50; /* สีเข้มๆ เหมือนแอปวิดีโอคอล */
-    color: #ecf0f1;
+    font-family: 'Sukhumvit', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5; /* Background สีเทาอ่อน */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,83 +12,99 @@ body {
 }
 
 #join-screen, #call-screen {
-    background-color: #34495e;
+    background-color: #ffffff; /* กล่องหลักสีขาว */
     padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 90%;
-    max-width: 400px;
+    max-width: 450px;
 }
 
-h1, h2 {
-    color: #e74c3c; /* แดงสวยๆ */
-    margin-bottom: 20px;
+h1 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 15px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     box-sizing: border-box;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
     text-align: center;
+    transition: border-color 0.3s;
+}
+input[type="text"]:focus {
+    border-color: #007bff; /* สีน้ำเงินดูโปร */
+    outline: none;
 }
 
 button {
-    background-color: #2ecc71; /* เขียว */
+    background-color: #007bff; /* สีน้ำเงินหลัก */
     color: white;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
     margin: 5px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
 }
 
 button:hover {
-    background-color: #27ae60;
+    background-color: #0056b3;
 }
 
 .leave-btn {
-    background-color: #e74c3c; /* แดง */
+    background-color: #dc3545; /* แดงสำหรับออกจากห้อง */
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
 }
 
 .leave-btn:hover {
-    background-color: #c0392b;
+    background-color: #c82333;
 }
 
 .warning-text {
-    color: #f1c40f; /* เหลือง */
+    color: #ffc107; /* เหลืองเตือน */
     font-size: 0.9em;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 /* วิดีโอคอล */
 #video-grid {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 15px;
+    margin-top: 25px;
     margin-bottom: 30px;
 }
 
 #video-grid video {
-    width: 48%; /* แบ่ง 2 จอ */
-    max-height: 300px;
-    background: black;
-    border-radius: 10px;
+    width: 48%; 
+    max-height: 320px;
+    background: #e9ecef;
+    border-radius: 15px;
     object-fit: cover;
-    border: 2px solid #e74c3c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #ddd;
 }
 
 #local-video {
-    border: 2px solid #3498db !important; /* วิดีโอของเราเป็นสีน้ำเงิน */
+    border-color: #007bff !important; /* วิดีโอของเราสีน้ำเงิน */
 }
 
 .controls {
@@ -100,15 +116,18 @@ button:hover {
 
 #status-message {
     margin-top: 15px;
-    font-size: 1.1em;
-    color: #9b59b6; /* ม่วง */
+    font-size: 1em;
+    color: #28a745; /* เขียวสำหรับสถานะดี */
+    font-weight: 600;
 }
 
 @media (max-width: 600px) {
-    #video-grid video {
-        width: 100%;
-    }
     #video-grid {
         flex-direction: column;
+        align-items: center;
+    }
+    #video-grid video {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
