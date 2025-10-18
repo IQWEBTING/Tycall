@@ -1,0 +1,114 @@
+/* public/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2c3e50; /* สีเข้มๆ เหมือนแอปวิดีโอคอล */
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#join-screen, #call-screen {
+    background-color: #34495e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1, h2 {
+    color: #e74c3c; /* แดงสวยๆ */
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    background-color: #2ecc71; /* เขียว */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+.leave-btn {
+    background-color: #e74c3c; /* แดง */
+}
+
+.leave-btn:hover {
+    background-color: #c0392b;
+}
+
+.warning-text {
+    color: #f1c40f; /* เหลือง */
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* วิดีโอคอล */
+#video-grid {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#video-grid video {
+    width: 48%; /* แบ่ง 2 จอ */
+    max-height: 300px;
+    background: black;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #e74c3c;
+}
+
+#local-video {
+    border: 2px solid #3498db !important; /* วิดีโอของเราเป็นสีน้ำเงิน */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#status-message {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #9b59b6; /* ม่วง */
+}
+
+@media (max-width: 600px) {
+    #video-grid video {
+        width: 100%;
+    }
+    #video-grid {
+        flex-direction: column;
+    }
+}
