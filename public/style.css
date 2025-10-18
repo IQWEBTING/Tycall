@@ -101,6 +101,13 @@ button:hover {
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border: 3px solid #ddd;
+    /* Mirroring effect สำหรับวิดีโอของเราเอง */
+    transform: rotateY(180deg);
+}
+
+/* ลบ Mirroring ออกจากวิดีโอเพื่อน (ถ้ามี) */
+.friend-video {
+    transform: none !important;
 }
 
 #local-video {
